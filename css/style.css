@@ -1,0 +1,269 @@
+:root {
+  --color-bg: hsl(257 40% 49%);
+  --color-bg-deep: hsl(257 41% 36%);
+  --color-surface: hsl(0 0% 100%);
+  --color-text: hsl(0 0% 100%);
+  --color-muted: hsl(206 17% 93%);
+  --color-magenta: hsl(300, 69%, 71%);
+  --color-accent: hsl(322 100% 66%);
+  --color-accent-dark: hsl(322 69% 54%);
+  --color-border: hsla(0 0% 100% / 0.18);
+  --shadow: 1px 3px 5px rgba(0, 0, 0, 0.269);
+  --radius-lg: 1.5rem;
+  --radius-pill: 9999999px;
+  --transition: 180ms ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  hanging-punctuation: first last;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", "Segoe UI", Roboto, Arial, sans-serif;
+  background: hsl(257 40% 49%);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+main {
+  margin-top: 4rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  letter-spacing: 0;
+  transition: font-size var(--transition);
+
+  @media (min-width: 48rem) {
+    font-size: 2.5rem;
+  }
+}
+
+p {
+  font-family: "Open Sans";
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0;
+
+  @media (min-width: 48rem) {
+    font-size: 1.125rem;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-shell {
+  min-block-size: 100vh;
+  max-inline-size: 1440px;
+  margin-inline: auto;
+  padding: 2.5rem 2.2188rem;
+  display: flex;
+  flex-direction: column;
+
+  background: url("../assets/images/mobile-background.svg") top left / cover
+    no-repeat;
+}
+
+.site-header,
+.site-footer {
+  display: flex;
+}
+
+.brand__logo {
+  block-size: 1.25rem;
+  transition: block-size var(--transition);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-inline-size: max-content;
+  border-radius: var(--radius-pill);
+  transition:
+    transform var(--transition),
+    background-color var(--transition),
+    color var(--transition),
+    border-color var(--transition);
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-2px);
+}
+
+.button--ghost {
+  background-color: var(--color-surface);
+  color: var(--color-bg-deep);
+  box-shadow: var(--shadow);
+}
+
+.button--ghost:hover,
+.button--ghost:focus-visible {
+  background-color: var(--color-muted);
+}
+
+.button--primary {
+  align-self: center;
+  inline-size: 100%;
+  max-inline-size: 12.5rem;
+  block-size: 2.5rem;
+  background-color: var(--color-surface);
+  color: var(--color-bg-deep);
+  font-family: "Poppins";
+  font-size: clamp(0.75rem, 2.5vw, 1.125rem);
+  margin-block-start: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.button--primary:hover,
+.button--primary:focus-visible {
+  background-color: var(--color-magenta);
+  color: var(--color-surface);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.5rem 0;
+}
+
+.hero__media {
+  align-self: stretch;
+}
+
+.hero__media img {
+  width: 100%;
+}
+
+.hero__content {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  max-inline-size: 32.5rem;
+}
+
+.hero__content p {
+  margin-top: 1.5rem;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: center;
+  margin-block-start: auto;
+  padding-top: 3.875rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  block-size: 1.75rem;
+  border-radius: var(--radius-pill);
+  transition:
+    border-color var(--transition),
+    transform var(--transition),
+    background-color var(--transition);
+}
+
+.social-link img {
+  transition:
+    filter var(--transition),
+    transform var(--transition);
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+  transform: translateY(-2px);
+}
+
+.social-link img:hover,
+.social-link img:focus-visible {
+  filter: brightness(0) saturate(100%) invert(60%) sepia(72%) saturate(4168%)
+    hue-rotate(293deg) brightness(100%) contrast(103%);
+}
+
+:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 4px;
+}
+
+@media (min-width: 48rem) {
+  .page-shell {
+    background: url("../assets/images/tablet-background.svg") top left / cover
+      no-repeat;
+
+    padding-inline: 5rem;
+  }
+
+  .hero {
+    gap: 2.5rem 0;
+  }
+
+  .button--primary {
+    margin-block-start: 2.5rem;
+    max-inline-size: 12.5rem;
+    block-size: 3.5rem;
+  }
+
+  .site-footer {
+    padding-block-start: 2.5rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .page-shell {
+    background: url("../assets/images/desktop-background.svg") top left / cover
+      no-repeat;
+  }
+
+  .brand__logo {
+    block-size: 2rem;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero__content {
+    text-align: start;
+    padding-inline-start: 3.5rem;
+    max-inline-size: 35.625rem;
+  }
+
+  .button--primary {
+    align-self: start;
+    margin-inline: 0;
+    inline-size: 12.5rem;
+    block-size: 3.5rem;
+  }
+
+  .site-footer {
+    margin-block-start: 0;
+    padding-block-start: 24px;
+    justify-content: end;
+  }
+}
