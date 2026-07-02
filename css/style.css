@@ -70,8 +70,8 @@ a {
 
 .page-shell {
   min-block-size: 100vh;
-  max-inline-size: 1440px;
   margin-inline: auto;
+  max-inline-size: 1440px;
   padding: 2.5rem 2.2188rem;
   display: flex;
   flex-direction: column;
@@ -160,6 +160,11 @@ a {
   max-inline-size: 32.5rem;
 }
 
+.hero__content h1 {
+  max-inline-size: 18.75rem;
+  margin-inline: auto;
+}
+
 .hero__content p {
   margin-top: 1.5rem;
 }
@@ -199,8 +204,8 @@ a {
   transform: translateY(-2px);
 }
 
-.social-link img:hover,
-.social-link img:focus-visible {
+.social-link:hover img,
+.social-link:focus-visible img {
   filter: brightness(0) saturate(100%) invert(60%) sepia(72%) saturate(4168%)
     hue-rotate(293deg) brightness(100%) contrast(103%);
 }
@@ -222,12 +227,16 @@ a {
     gap: 2.5rem 0;
   }
 
+  .hero__content h1 {
+    max-inline-size: 43.75rem;
+    margin-inline: auto;
+  }
+
   .button--primary {
     margin-block-start: 2.5rem;
     max-inline-size: 12.5rem;
     block-size: 3.5rem;
     font-size: 1.125rem;
-    transition: font-size var(--transition);
   }
 
   .site-footer {
@@ -239,6 +248,8 @@ a {
   .page-shell {
     background: url("../assets/images/desktop-background.svg") top left / cover
       no-repeat;
+
+    padding: 4rem 5.25rem;
   }
 
   .brand__logo {
@@ -254,6 +265,10 @@ a {
     text-align: start;
     padding-inline-start: 3.5rem;
     max-inline-size: 35.625rem;
+  }
+
+  .hero__content h1 {
+    margin-inline: none;
   }
 
   .button--primary {
