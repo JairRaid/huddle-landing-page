@@ -19,8 +19,8 @@ This is a solution to the [Huddle landing page with a single introductory sectio
 
 Your users should be able to:
 
--View the optimal layout for the interface depending on their device's screen size
--See hover and focus states for all interactive elements on the page
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
 
 ### Screenshot
 

@@ -80,8 +80,7 @@ a {
     no-repeat;
 }
 
-.site-header,
-.site-footer {
+.site-header {
   display: flex;
 }
 
@@ -268,7 +267,7 @@ a {
   }
 
   .hero__content h1 {
-    margin-inline: none;
+    margin-inline: 0;
   }
 
   .button--primary {
