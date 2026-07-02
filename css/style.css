@@ -127,7 +127,7 @@ a {
   background-color: var(--color-surface);
   color: var(--color-bg-deep);
   font-family: "Poppins";
-  font-size: clamp(0.75rem, 2.5vw, 1.125rem);
+  font-size: 0.75rem;
   margin-block-start: 2rem;
   box-shadow: var(--shadow);
 }
@@ -226,6 +226,8 @@ a {
     margin-block-start: 2.5rem;
     max-inline-size: 12.5rem;
     block-size: 3.5rem;
+    font-size: 1.125rem;
+    transition: font-size var(--transition);
   }
 
   .site-footer {
